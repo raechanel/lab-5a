@@ -85,7 +85,7 @@ let testArray = [2, 3, 4]; //eslint-disable-line
 function sumArray(sumArr) { //eslint-disable-line
   let sum = 0 
   for (let i = 0; i < sumArr.length; i++){
-    sum+= sumArr[i];
+    sum += sumArr[i];
   }
   let resp = `${testArray} was passed in as an array of numbers, and ${sum} is their sum.`
   return [sum, resp];
@@ -109,11 +109,17 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function multiplyArray(multArr) { //eslint-disable-line
-
+  let product = 1
+  for (let i = 0; i < multArr.length; i++){
+    product *= multArr[i];
+  }
+  let resp = `The numbers ${testArray} have a product of ${product}.`
+  return [product, resp];
+ 
 }
 
 // Here is the test for multiplyArray(); uncomment it to run it
-// testMultiplyArray(testArray);
+testMultiplyArray(testArray);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
 
